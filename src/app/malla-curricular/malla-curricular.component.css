@@ -1,0 +1,373 @@
+.modal-header {
+
+    button {
+  
+      right: 30px;
+  
+      position: absolute;
+  
+    }
+  
+  }
+  
+  
+  
+  .semestre {
+  
+    padding: 0 5px;
+  
+  }
+  
+  
+  
+  @media screen and (min-width: 1101px) {
+  
+    .semestre,
+  
+    .materia-enfasis {
+  
+      width: 11.11%;
+  
+    }
+  
+  }
+  
+  
+  
+  @media screen and (max-width: 1100px) {
+  
+    .semestre,
+  
+    .materia-enfasis {
+  
+      width: 20%;
+  
+      margin-top: 2em;
+  
+    }
+  
+  }
+  
+  
+  
+  @media screen and (max-width: 992px) {
+  
+    .semestre,
+  
+    .materia-enfasis {
+  
+      width: 33.33%;
+  
+      margin-top: 2em;
+  
+    }
+  
+  }
+  
+  
+  
+  @media screen and (max-width: 600px) {
+  
+    .semestre,
+  
+    .materia-enfasis {
+  
+      width: 50%;
+  
+      margin-top: 1em;
+  
+    }
+  
+  }
+  
+  
+  
+  @media screen and (max-width: 400px) {
+  
+    .semestre,
+  
+    .materia-enfasis {
+  
+      width: 100%;
+  
+      margin-top: 1em;
+  
+    }
+  
+  }
+  
+  
+  
+  .materia {
+  
+    border-style: solid;
+  
+    border-width: 2px;
+  
+    border-color: #9a9a9a;
+  
+    border-radius: 2px;
+  
+    margin-top: 5px;
+  
+    box-shadow: 2px 2px 3px #c9c9c9;
+  
+    cursor: pointer;
+  
+    /*animacion*/
+  
+    -webkit-tap-highlight-color: transparent;
+  
+    will-change: opacity, transform;
+  
+    transition: 0.4s ease-out;
+  
+  }
+  
+  
+  
+  .materia:hover {
+  
+    background-color: rgba(128, 128, 128, 0.17);
+  
+  }
+  
+  
+  
+  .tituloSemestre {
+  
+    padding: 7px;
+  
+    text-transform: uppercase;
+  
+    font-weight: bold;
+  
+    border-radius: 3px;
+  
+    color: white;
+  
+  }
+  
+  
+  
+  .tituloMalla {
+  
+    margin: 3em;
+  
+    width: 95%;
+  
+  }
+  
+  
+  
+  .nombreMateria {
+  
+    font-size: 12px;
+  
+    text-align: center;
+  
+  }
+  
+  
+  
+  .detalle-materia {
+  
+    padding: 0 10px;
+  
+  }
+  
+  
+  
+  .area {
+  
+    height: 8px;
+  
+  }
+  
+  
+  
+  .titulo-area {
+  
+    margin: 0.5em;
+  
+  }
+  
+  
+  
+  .verMicrocurriculo {
+  
+    font-size: 12px;
+  
+    text-align: right;
+  
+  }
+  
+  
+  
+  .prerequisito {
+  
+    background-color: #00b8d4 !important;
+  
+    color: white;
+  
+  }
+  
+  
+  
+  .corequisito {
+  
+    background-color: #00bfa5 !important;
+  
+    color: white;
+  
+  }
+  
+  
+  
+  .materiaSeleccionada {
+  
+    background-color: #6200ea !important;
+  
+    color: white;
+  
+  }
+  
+  
+  
+  .materia-enfasis {
+  
+    height: 90px !important;
+  
+    margin: 5px;
+  
+  }
+  
+  
+  
+  .enfasis-tit {
+  
+    color: white;
+  
+    padding: 0.2em;
+  
+  }
+  
+  
+  
+  /*area*/
+  
+  
+  
+  .area1 {
+  
+    background-color: #f44336;
+  
+  }
+  
+  
+  
+  .area2 {
+  
+    background-color: #f44336;
+  
+  }
+  
+  
+  
+  .area3 {
+  
+    background-color: #2196f3;
+  
+  }
+  
+  
+  
+  .area4 {
+  
+    background-color: #009688;
+  
+  }
+  
+  
+  
+  .area5 {
+  
+    background-color: #cddc39;
+  
+  }
+  
+  
+  
+  .area6 {
+  
+    background-color: #ffc107;
+  
+  }
+  
+  
+  
+  .area7 {
+  
+    background-color: #607d8b;
+  
+  }
+  
+  
+  
+  .area8 {
+  
+    background-color: #ff5722;
+  
+  }
+  
+  
+  
+  .area9 {
+  
+    background-color: #76ff03;
+  
+  }
+  
+  
+  
+  .area10 {
+  
+    background-color: #1de9b6;
+  
+  }
+  
+  
+  
+  .area11 {
+  
+    background-color: #b388ff;
+  
+  }
+  
+  
+  
+  .area12 {
+  
+    background-color: #ff80ab;
+  
+  }
+  
+  
+  
+  /*Materias electivas*/
+  
+  
+  
+  .materias-lineas {
+  
+    display: flex;
+  
+    padding: 15px;
+  
+    flex-direction: row;
+  
+    flex-flow: wrap;
+  
+    padding: 15px 0;
+  
+  }

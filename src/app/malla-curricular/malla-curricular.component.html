@@ -1,0 +1,221 @@
+<div class="modal-container">
+
+  <div class="modal-header">
+
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+
+      <span aria-hidden="true">&times;</span>
+
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+
+
+    <div class="container">
+
+      <div class="row container">
+
+        <h2 class="verde-oscuro">Malla Curricular</h2>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-3">
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#F44336;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Ciencias exáctas y naturales</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#673AB7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Ciencias sociales y humanas</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#2196F3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Ingeniería básica</h6>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#009688;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Algoritmia y programación</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#CDDC39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Matemáticas discretas</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#FFC107;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Ciencia computacional</h6>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#607D8B;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Arquitectura de máquinas y sistemas operatvios</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#FF5722;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Comunicación de datos</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#76FF03;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Ingeniería de software</h6>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#1DE9B6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Sistemas de información</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#B388FF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Administración de la información</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#FF80AB;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Elementos sociales y profesionales</h6>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#00B8D4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Prerequisitos</h6>
+
+          <h6 class="titulo-area">
+
+            <span style="background-color:#00BFA5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Corequisitos</h6>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- pensum -->
+
+    <div class="container">
+
+      <div id="pensum" class="row">
+
+        <div class="semestre" *ngFor="let semestre of pensum;let i = index">
+
+          <div class="fondo-verde-claro tituloSemestre no-selectable text-center">
+
+            Semestre {{i+1}}
+
+          </div>
+
+          <div id="{{materia.codigo}}" class="materia no-padding" *ngFor="let materia of semestre">
+
+            <div class="detalle-materia" (click)="mostrarRequisitos(materia.prerequisito,materia.corequisito,materia.codigo)">
+
+              <p class="no-margin gris-oscuro no-selectable" style="font-size: 10px;">{{materia.codigo}} - Cr:{{materia.creditos}}</p>
+
+              <p class="nombreMateria no-selection">{{materia.nombre}}</p>
+
+              <div class="verMicrocurriculo">
+
+                <span>
+
+                  <a href="http://www.pdf995.com/samples/pdf.pdf" target="blank">
+
+                    <i class="fa fa-plus verde-claro" aria-hidden="true"></i>
+
+                  </a>
+
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="area" [ngClass]="colorArea(materia.area)">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- fin pensum -->
+
+    <!-- lineas de enfasis -->
+
+    <div class="container">
+
+      <h3>Líneas de énfasis</h3>
+
+
+
+      <div *ngFor="let linea of enfasis">
+
+
+
+        <div class="fondo-verde-claro no-selectable row">
+
+          <h6 class="enfasis-tit">{{linea.nombre}}</h6>
+
+        </div>
+
+        <div class="materias-lineas row">
+
+          <div id="{{materia.codigo}}" class="materia materia-enfasis no-padding" *ngFor="let materia of linea.cursos">
+
+            <div class="detalle-materia" style="width:100%;" (click)="mostrarRequisitos(materia.prerequisito,materia.corequisito,materia.codigo)">
+
+              <p class="no-margin gris-oscuro no-selection" style="font-size: 10px;">{{materia.codigo}} - Cr:{{materia.creditos}}</p>
+
+              <p class="nombreMateria no-selection">{{materia.nombre}}</p>
+
+              <div class="verMicrocurriculo">
+
+                <span>
+
+                  <a href="http://www.pdf995.com/samples/pdf.pdf" target="blank">
+
+                    <i class="fa fa-plus verde-claro" aria-hidden="true"></i>
+
+                  </a>
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <!-- fin lineas de enfasis -->
+
+  </div>
+
+</div>
