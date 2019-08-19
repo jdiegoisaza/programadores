@@ -5,15 +5,18 @@ import { Routes, RouterModule, Router } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { InsertarCursoComponent } from './insertar-curso/insertar-curso.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: InsertarCursoComponent},
+  { path: '', component: HomeComponent},
+  { path: 'insertar', component: InsertarCursoComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    InsertarCursoComponent
+    InsertarCursoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

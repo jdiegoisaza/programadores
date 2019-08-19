@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gestionCurriculo';
   public cursos;
-  
-  constructor() {  
+
+  constructor() {
     this.cursos = [
       {
         nombre: "INTRO A LA INGEN D SISTEM",
@@ -34,7 +33,7 @@ export class AppComponent {
         htp: "0",
         correquisitos: "",
         prerrequisitos: ""
-      }, 
+      },
       {
         nombre: "MATEMÁTICAS DISCRETAS I",
         materia: "2508207",
@@ -46,9 +45,9 @@ export class AppComponent {
         htp: "4",
         correquisitos: "",
         prerrequisitos: "2508120"
-      }, 
-    ];    
+      },
+    ];
   }
-  
-  
+
+
 }
