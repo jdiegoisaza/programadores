@@ -18,5 +18,7 @@ export class EditarEliminarCursoComponent {
     htp: "2",
     correquisitos: "Corr Intro Ing.",
     prerrequisitos: "Prerr Intro Ing."
-  };
+  }
+  public cursos =[{codigo:"1221", nombre:"viva la u"},
+  {codigo:"1223", nombre:"introduccion"}];
 }

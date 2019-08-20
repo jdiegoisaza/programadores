@@ -1,115 +1,21 @@
-<form>
-  <h2>Insertar curso</h2>
+<h2>Editar-Eliminar curso</h2>
 
-  <div class="form-group">
-    <label for="name">Nombre</label>
-    <input
-    type="text"
-    class="form-control"
-    id="nombre"
-    [(ngModel)]="curso.nombre"
-    name="nombre"
-    required>
-  </div>
+<table class="table table-bordered">
 
-  <div class="form-group">
-    <label for="name">Materia</label>
-    <input
-    type="text"
-    class="form-control"
-    id="materia"
-    [(ngModel)]="curso.materia"
-    name="materia"
-    required>
-  </div>
+  <tr>
+    <td>Codigo</td>
+    <td>Curso</td>
+    <td>Editar</td>
+    <td>Eliminar</td>
 
-  <div class="form-group">
-    <label for="name">Nivel</label>
-    <input
-    type="text"
-    class="form-control"
-    id="nivel"
-    [(ngModel)]="curso.nivel"
-    name="nivel"
-    required>
-  </div>
+  </tr>
+  <tr *ngFor="let curs of cursos">
 
-  <div class="form-group">
-    <label for="name">Créditos</label>
-    <input
-    type="text"
-    class="form-control"
-    id="creditos"
-    [(ngModel)]="curso.creditos"
-    name="creditos"
-    required>
-  </div>
-
-  <div class="form-group">
-    <label for="name">Horas p</label>
-    <input
-    type="text"
-    class="form-control"
-    id="hp"
-    [(ngModel)]="curso.hp"
-    name="hp"
-    required>
-  </div>
-
-  <div class="form-group">
-    <label for="name">Horas e</label>
-    <input
-    type="text"
-    class="form-control"
-    id="he"
-    [(ngModel)]="curso.he"
-    name="he"
-    required>
-  </div>
-
-  <div class="form-group">
-    <label for="name">Horas t</label>
-    <input
-    type="text"
-    class="form-control"
-    id="ht"
-    [(ngModel)]="curso.ht"
-    name="ht"
-    required>
-  </div>
-
-  <div class="form-group">
-    <label for="name">Horas tp</label>
-    <input
-    type="text"
-    class="form-control"
-    id="htp"
-    [(ngModel)]="curso.htp"
-    name="htp"
-    required>
-  </div>
-
-  <div class="form-group">
-    <label for="name">Correquisitos</label>
-    <input
-    type="text"
-    class="form-control"
-    id="correquisitos"
-    [(ngModel)]="curso.correquisitos"
-    name="correquisitos"
-    required>
-  </div>
-
-  <div class="form-group">
-    <label for="name">Prerrequisitos</label>
-    <input
-    type="text"
-    class="form-control"
-    id="prerrequisitos"
-    [(ngModel)]="curso.prerrequisitos"
-    name="prerrequisitos"
-    required>
-  </div>
-
-  <button type="submit" class="btn btn-success">Enviar</button>
-</form>
+    <td>{{curs.codigo}}</td>
+    <td>{{curs.nombre}}</td>
+    <td> <button type="submit" id="Editar" class="btn btn-dark">Editar</button>
+    </td>
+    <td> <button type="submit" id="Eliminar" class="btn btn-dark">Eliminar</button>
+    </td>
+</tr>
+</table>
