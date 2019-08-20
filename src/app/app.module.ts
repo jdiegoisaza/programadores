@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { NgbModule, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
@@ -35,7 +37,7 @@ const routes: Routes = [
     MatPaginatorModule,
     MatSortModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

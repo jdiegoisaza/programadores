@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-content',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('modal_Programas') modal: ElementRef;
+  private tablaModal: NgbModalRef;
+  // constructor(private ngbmodal: NgbModal) { }
+
+  constructor(){}
 
   ngOnInit() {
   }
+
+  // selectProgram() {
+  //   this.tablaModal = this.ngbmodal.open(this.modal);
+  // }
 
 }
