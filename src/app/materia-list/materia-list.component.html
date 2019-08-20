@@ -1,0 +1,27 @@
+
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)" hideToggle *ngFor="let semestre of semestres;let i = index">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Nivel {{semestre.Nivel}}
+      </mat-panel-title>
+      <mat-panel-description>
+       
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-selection-list #shoes>
+      <mat-list-option *ngFor="let materia of semestre.Materias">
+        {{materia.Materia}} {{materia.Nombre}}
+      </mat-list-option>
+    </mat-selection-list>
+    
+
+  
+  </mat-expansion-panel>
+
+  
+
+
+</mat-accordion>

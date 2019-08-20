@@ -1,0 +1,8 @@
+::ng-deep.mat-pseudo-checkbox{
+    display: none !important;
+  }
+  
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
